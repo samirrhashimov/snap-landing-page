@@ -1,0 +1,10 @@
+:root {
+    --gray50: hsl(0, 0%, 98%);
+    --gray500: hsl(0, 0%, 41%);
+    --gray950: hsl(0, 0%, 8%);
+}
+
+html , body {
+    margin: 0;
+    padding: 0;
+}

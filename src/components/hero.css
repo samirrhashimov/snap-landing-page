@@ -1,0 +1,69 @@
+.heroSection {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    max-width: 1000px;
+    margin-top: 30px;
+    font-family: Epilogue;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.heroLeft h1 {
+    margin: 30px 0;
+    font-size: 3.8rem;
+}
+
+.heroLeft p {
+    margin: 0px;
+    color: var(--gray500);
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.heroRight {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+}
+
+.heroImg {
+    width: 350px;
+    height: 450px;
+}
+
+.ctaBtn {
+    border-radius: 10px;
+    color: var(--gray50);
+    background-color: var(--gray950);
+    border: none;
+    padding: 15px 25px;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid var(--gray950);
+    transition: all 0.2s ease-in;
+}
+
+.ctaBtn:hover {
+    background-color: var(--gray50);
+    color: var(--gray950);
+}
+
+.clients {
+    display: flex;
+    gap: 30px;
+}
+
+.client {
+    height: 20px;
+}
