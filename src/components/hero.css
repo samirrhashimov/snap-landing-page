@@ -41,6 +41,11 @@
     height: 450px;
 }
 
+.heroImgMobile {
+    display: none;
+    width: 100%;
+}
+
 .ctaBtn {
     border-radius: 10px;
     color: var(--gray50);
@@ -66,4 +71,51 @@
 
 .client {
     height: 20px;
+}
+
+@media (max-width: 600px) {
+    .navList {
+        display: none;
+    }
+    .actionsButtons {
+        display: none;
+    }
+
+    .navbar {
+        margin: 0 10px;
+    }
+
+    .heroImg {
+        display: none;
+    }
+
+    .heroImgMobile {
+        display: block;
+    }
+
+    .heroLeft h1 {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    .heroLeft h1 , .heroLeft p {
+        display: flex;
+        text-align: center;
+        justify-content: center !important;
+    }
+
+    .heroLeftUp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .ctaBtn {
+        max-width: 150px;
+    }
+
+    .clients {
+        margin-top: 50px;
+    }
 }

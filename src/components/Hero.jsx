@@ -1,6 +1,7 @@
 import React from 'react'
 import './hero.css'
 import heroImg from '../assets/images/image-hero-desktop.png'
+import heroImgMobile from '../assets/images/image-hero-mobile.png'
 import audiophile from '../assets/images/client-audiophile.svg'
 import databiz from '../assets/images/client-databiz.svg'
 import maker from '../assets/images/client-maker.svg'
@@ -13,6 +14,7 @@ const Hero = () => {
                 <div className="hero">
                     <div className="heroLeft">
                         <div className="heroLeftUp">
+                            <img className='heroImgMobile' src={heroImgMobile} />
                             <h1>Make remote work</h1>
                             <p>Get your team in sync, no matter your location. Streamline processes,
                                 create team rituals, and watch productivity soar.</p>
