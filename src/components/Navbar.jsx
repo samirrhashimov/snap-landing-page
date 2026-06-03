@@ -21,6 +21,34 @@ function closeMenu() {
     menu.style.display = 'none'
 }
 
+function controlD1() {
+    const d1 = document.querySelector('.d1')
+    const icon = document.querySelector('.d1Icon')
+    const isOpen = window.getComputedStyle(d1).display !== 'none'
+
+    if (isOpen) {
+        d1.style.display = 'none'
+        icon.classList.remove('rotate')
+    } else {
+        d1.style.display = 'block'
+        icon.classList.add('rotate')
+    }
+}
+
+function controlD2() {
+    const d2 = document.querySelector('.d2')
+    const icon = document.querySelector('.d2Icon')
+    const isOpen = window.getComputedStyle(d2).display !== 'none'
+
+    if (isOpen) {
+        d2.style.display = 'none'
+        icon.classList.remove('rotate')
+    } else {
+        d2.style.display = 'block'
+        icon.classList.add('rotate')
+    }
+}
+
 const Navbar = () => {
     return (
         <div>
@@ -70,14 +98,14 @@ const Navbar = () => {
                             <img className='menuBtn' src={menu} onClick={openMenu} />
                             <div className='menu'>
                                 <div className='menuIns'>
-                                    <div className='menuClose' onClick={closeMenu}><IoClose className='closeBtn'/></div>
+                                    <div className='menuClose' onClick={closeMenu}><IoClose className='closeBtn' /></div>
                                     <div className="menuList">
-                                        <div className="menuDropdown">
+                                        <div className="menuDropdown" onClick={controlD1}>
                                             <p className='menuElement'>
-                                                Features <FaChevronDown />
+                                                Features <FaChevronDown className='d1Icon'/>
                                             </p>
 
-                                            <div className="dropdownMenu">
+                                            <div className="menuDropdownMenu d1">
                                                 <p><img src={todo} />Todo List</p>
                                                 <p><img src={calendar} />Calendar</p>
                                                 <p><img src={reminders} />Reminders</p>
@@ -86,11 +114,11 @@ const Navbar = () => {
                                         </div>
 
                                         <div className="menuDropdown">
-                                            <p className='menuElement'>
-                                                Company <FaChevronDown />
+                                            <p className='menuElement' onClick={controlD2}>
+                                                Company <FaChevronDown className='d2Icon'/>
                                             </p>
 
-                                            <div className="dropdownMenu">
+                                            <div className="menuDropdownMenu d2">
                                                 <p>History</p>
                                                 <p>Our Team</p>
                                                 <p>Blog</p>
@@ -99,6 +127,10 @@ const Navbar = () => {
 
                                         <p className='menuElement'>Careers</p>
                                         <p className='menuElement'>About</p>
+                                        <div className="menuActionsButtons">
+                                            <button className='login'>Login</button>
+                                            <button className='register'>Register</button>
+                                        </div>
                                     </div>
                                 </div>
 
