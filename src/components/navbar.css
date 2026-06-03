@@ -125,3 +125,64 @@ button.register {
 .dropdown:hover .dropdownMenu {
     display: block;
 }
+
+.menuBtn {
+    display: none;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-end;
+    background-color: #00000099;
+}
+
+.menuIns {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100vh;
+    padding: 25px;
+    background-color: #ffffff;
+    color: var(--gray500);
+    font-family: Epilogue;
+}
+
+.menuClose {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeBtn {
+    height: 30px;
+    width: 30px;
+    color: #000000;
+}
+
+.menuIns p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .navList {
+        display: none;
+    }
+    .actionsButtons {
+        display: none;
+    }
+
+    .navbar {
+        margin: 0 10px;
+    }
+
+    .menuBtn {
+        display: block;
+    }
+}
